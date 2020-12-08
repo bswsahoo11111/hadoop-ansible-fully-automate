@@ -8,7 +8,7 @@ java_packages:
 
 
 # hadoop basic vars
-download_link: "https://media.githubusercontent.com/media/imraviarora/hadoop3.3.0-targz/master/hadoop/hadoop-3.3.0.tar.gz"
+download_link: "https://downloads.apache.org/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz"
 download_path: "/home/hadoop/downloads"
 hadoop_version: "3.3.0"
 hadoop_path: "/home/hadoop"
