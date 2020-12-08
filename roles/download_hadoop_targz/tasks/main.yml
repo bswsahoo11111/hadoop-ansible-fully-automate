@@ -2,17 +2,17 @@
 - name: Create a Directory for hadoop
   become: yes
   file:
-     path: {{download_path}}
+     path: {{ download_path }}
      state: directory
      mode: 0755
-     owner: {{user}}
-     group: {{user}}
+     owner: {{ user }}
+     group: {{ user }}
 
 - name: Download Hadoop using get_url
   become: yes
   get_url:
-     url: {{download_link}}
-     dest: {{download_path}}
+     url: {{ download_link }}
+     dest: {{ download_path }}
      mode: 0755
      group: {{user}}
      owner: {{user}}
