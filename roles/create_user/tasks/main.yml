@@ -1,11 +1,6 @@
 ---
-- hosts: all
-  user: root
-  vars:
-    # password is test@123
-    # command to generate hashcode is given below
-    # python3 -c 'import crypt,getpass;pw=getpass.getpass();print(crypt.crypt(pw) if (pw==getpass.getpass("Confirm: ")) else exit())'
-    password: $6$GZWgyu5SXBkFqO/Q$Mx5keaawrOpJwRagT3Y9WWHbyLcC4cTKhduJiaItpVB2nsZsoXfuCUATa2GHUF9lmNcQOYqy.q0Xh0xidUlBG0
-
-  tasks:
-    - user: name={{user}} password={{password}}
+- name: Create Hadoop User
+  user: name={{user}} password={{user_hashcode_credentials}}
+  # password is test@123
+  # command to generate hashcode is given below
+  # python3 -c 'import crypt,getpass;pw=getpass.getpass();print(crypt.crypt(pw) if (pw==getpass.getpass("Confirm: ")) else exit())'
